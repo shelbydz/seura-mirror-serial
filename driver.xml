@@ -1,0 +1,29 @@
+<devicedata>
+  <version>1</version>
+  <manufacturer>Seura</manufacturer>
+  <model>Mirror TV</model>
+  <search_type>c4:av_gen</search_type>
+  <creator>Shawn Sullivan</creator>
+  <name>Seura Mirror TV [Serial]</name>
+  <small>devices_sm/C4.gif</small>
+  <large>devices_lg/C4.gif</large>
+  <control>lua_gen</control>
+  <controlmethod>serial</controlmethod>
+  <driver>DriverWorks</driver>
+  <copyright>Copyright 2019 CompleteAV</copyright>
+  <created></created>
+  <modified></modified>
+  <proxies qty="1">
+    <proxy>tv</proxy>
+  </proxies>
+  <config>
+    <script></script>
+    <power_management_method>DiscreteCodes</power_management_method>
+    <power_delay>1</power_delay>
+    <power_command_delay>2</power_command_delay>
+    <power_command_needed>True</power_command_needed>
+    <serialsettings>9600 8 none 1 none 232</serialsettings>
+  </config>
+  <connections></connections>
+  <capabilities></capabilities>
+</devicedata>
