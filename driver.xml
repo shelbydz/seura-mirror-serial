@@ -14,16 +14,172 @@
   <created></created>
   <modified></modified>
   <proxies qty="1">
-    <proxy>tv</proxy>
+    <proxy proxybindingid="5000">tv</proxy>
   </proxies>
   <config>
-    <script></script>
+    <script file="driver.lua"></script>
     <power_management_method>DiscreteCodes</power_management_method>
     <power_delay>1</power_delay>
     <power_command_delay>2</power_command_delay>
     <power_command_needed>True</power_command_needed>
     <serialsettings>9600 8 none 1 none 232</serialsettings>
   </config>
-  <connections></connections>
+  <connections>
+    <connection proxybindingid="5000">
+      <type>1</type>
+      <id>1</id>
+      <audiosource>false</audiosource>
+      <videosource>false</videosource>
+      <connectionname>RS232</connectionname>
+      <facing>2</facing>
+      <consumer>true</consumer>
+      <linelevel>false</linelevel>
+      <classes>
+        <class>
+          <classname>RS_232</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5000">
+      <id>7000</id>
+      <connectionname>Room Selection</connectionname>
+      <facing>6</facing>
+      <type>7</type>
+      <consumer>false</consumer>
+      <linelevel>true</linelevel>
+      <classes>
+        <class>
+          <classname>AUDIO_VOLUME</classname>
+        </class>
+        <class>
+          <classname>AUDIO_SELECTION</classname>
+        </class>
+        <class>
+          <classname>VIDEO_SELECTION</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5000">
+      <type>2</type>
+      <id>5000</id>
+      <audiosource>false</audiosource>
+      <videosource>false</videosource>
+      <connectionname>Television</connectionname>
+      <facing>1</facing>
+      <consumer>false</consumer>
+      <linelevel>false</linelevel>
+      <classes>
+        <class>
+          <classname>TV</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5000">
+      <type>5</type>
+      <id>1002</id>
+      <audiosource>false</audiosource>
+      <videosource>false</videosource>
+      <connectionname>HDMI 1</connectionname>
+      <facing>1</facing>
+      <consumer>true</consumer>
+      <linelevel>false</linelevel>
+      <classes>
+        <class>
+          <classname>HDMI</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5000">
+      <type>5</type>
+      <id>1000</id>
+      <audiosource>false</audiosource>
+      <videosource>false</videosource>
+      <connectionname>HDMI 2</connectionname>
+      <facing>1</facing>
+      <consumer>true</consumer>
+      <linelevel>false</linelevel>
+      <classes>
+        <class>
+          <classname>HDMI</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5000">
+      <type>5</type>
+      <id>1001</id>
+      <audiosource>false</audiosource>
+      <videosource>false</videosource>
+      <connectionname>HDMI 3</connectionname>
+      <facing>1</facing>
+      <consumer>true</consumer>
+      <linelevel>false</linelevel>
+      <classes>
+        <class>
+          <classname>HDMI</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5000">
+      <type>6</type>
+      <id>4000</id>
+      <audiosource>true</audiosource>
+      <videosource>false</videosource>
+      <connectionname>Optical</connectionname>
+      <facing>1</facing>
+      <consumer>false</consumer>
+      <linelevel>false</linelevel>
+      <classes>
+        <class>
+          <classname>DIGITAL_OPTICAL</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5000">
+      <type>6</type>
+      <id>4001</id>
+      <audiosource>true</audiosource>
+      <videosource>false</videosource>
+      <connectionname>Coax</connectionname>
+      <facing>1</facing>
+      <consumer>false</consumer>
+      <linelevel>false</linelevel>
+      <classes>
+        <class>
+          <classname>DIGITAL_COAX</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5000">
+      <id>7001</id>
+      <connectionname>Room Selection</connectionname>
+      <facing>6</facing>
+      <type>7</type>
+      <consumer>false</consumer>
+      <linelevel>true</linelevel>
+      <classes>
+        <class>
+          <classname>AUDIO_VOLUME</classname>
+        </class>
+        <class>
+          <classname>AUDIO_SELECTION</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5000">
+      <type>6</type>
+      <id>4002</id>
+      <audiosource>true</audiosource>
+      <videosource>false</videosource>
+      <connectionname>Stereo</connectionname>
+      <facing>1</facing>
+      <consumer>false</consumer>
+      <linelevel>true</linelevel>
+      <classes>
+        <class>
+          <classname>STEREO</classname>
+        </class>
+      </classes>
+    </connection>
+  </connections>
   <capabilities></capabilities>
 </devicedata>

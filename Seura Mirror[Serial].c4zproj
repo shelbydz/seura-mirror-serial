@@ -1,5 +1,6 @@
 ﻿<Driver type="c4z" name="Seura Mirror[Serial]">
  <Items>
   <Item type="file" name="driver.xml" />
+  <Item type="file" name="driver.lua" />
  </Items>
 </Driver>
