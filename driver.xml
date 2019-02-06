@@ -12,7 +12,7 @@
   <driver>DriverWorks</driver>
   <copyright>Copyright 2019 CompleteAV</copyright>
   <created></created>
-  <modified>02/06/2019 1:49 PM</modified>
+  <modified>02/06/2019 4:38 PM</modified>
   <proxies qty="1">
     <proxy proxybindingid="5000">tv</proxy>
   </proxies>
@@ -183,6 +183,7 @@
   </connections>
   <capabilities>
     <has_discrete_input_select>True</has_discrete_input_select>
+    <has_up_down_volume_control>True</has_up_down_volume_control>
     <has_audio>True</has_audio>
     <has_discrete_volume_control>True</has_discrete_volume_control>
   </capabilities>
