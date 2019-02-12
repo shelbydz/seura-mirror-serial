@@ -28,32 +28,54 @@ serial_commands = {
     ["NUMBER_0"] = "KEY:0",
     ["1002"] = "INP:1",	-- HDMI1
     ["1000"] = "INP:6",	-- HDMI2
-    ["1001"] = "INP:9"	-- HDMI3
+    ["1001"] = "INP:9",	-- HDMI3
+    ["PULSE_VOL_UP"] = "KEY:23",
+    ["PULSE_VOL_DOWN"] = "KEY:24"
 }
+
+timer_delay = 100
+timers = {}
 
 function process_commands( strCommand, tParams )
 	local command = ""
 	local returnCommand = ""
-	if tParams ~= nil then
+	
+	-- debug:
+	-- if tParams ~= nil then
+		   -- for k,v in pairs(tParams) do
+		  -- print(k, v)
+	   -- end
+	-- end
+	
+	if tParams ~= nil and serial_commands[tParams["INPUT"]] ~= nill then
 	   command = serial_commands[tParams["INPUT"]]
-	   --command = tParams["INPUT"]
      elseif serial_commands[strCommand] ~= nil then
 	   command = serial_commands[strCommand]
 	end
+     returnCommand = tohex(command_start) .. command .. tohex(command_stop)
+     return returnCommand
 	
-    returnCommand = tohex(command_start) .. command .. tohex(command_stop)
-	return returnCommand
+end
+
+function process_volume ( strCommand )
+    local timer = nil
+    if string:match(strCommand, '^STOP_VOLUME') and timers[strCommand] ~= nil then
+	   timers[strCommand].Cancel()
+    elseif string:match(strCommand, '^START_VOLUME') then
+	   timer = C4:SetTimer()
+    end
 end
 
 function ReceivedFromProxy( idBinding, strCommand, tParams )
-    local command = process_commands(strCommand, tParams)
-    C4:SendToSerial(1, command)
-    print ("received command " .. strCommand)
-    print ("processed command " .. command)
+    if serial_commands[strCommand] ~= nil then
+	   local command = process_commands(strCommand, tParams)
+	   C4:SendToSerial(1, command)
+	   -- print ("processed command " .. command)
+    end
 end
 
 function ReceivedFromSerial(idBinding, strData)
-    print("response " .. strData)
+    -- print("response " .. strData)
 end
 
 function OnBindingChanged ( idBinding, strClass, bIsBound )

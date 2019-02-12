@@ -1,5 +1,5 @@
 <devicedata>
-  <version>5</version>
+  <version>6</version>
   <manufacturer>Seura</manufacturer>
   <model>Mirror TV</model>
   <search_type>c4:av_gen</search_type>
@@ -12,7 +12,7 @@
   <driver>DriverWorks</driver>
   <copyright>Copyright 2019 CompleteAV</copyright>
   <created></created>
-  <modified>02/06/2019 4:38 PM</modified>
+  <modified>02/12/2019 10:41 AM</modified>
   <proxies qty="1">
     <proxy proxybindingid="5000">tv</proxy>
   </proxies>
@@ -20,9 +20,17 @@
     <script file="driver.lua"></script>
     <power_management_method>DiscreteCodes</power_management_method>
     <power_delay>1</power_delay>
-    <power_command_delay>2</power_command_delay>
-    <power_command_needed>True</power_command_needed>
+    <power_command_delay>3</power_command_delay>
+    <power_command_needed>False</power_command_needed>
     <serialsettings>9600 8 none 1 none 232</serialsettings>
+    <properties>
+      <property>
+        <name>Unit Number</name>
+        <type>STRING</type>
+        <default>000</default>
+        <description>Unit number for this display. Leave 000 for only 1 display.</description>
+      </property>
+    </properties>
   </config>
   <connections>
     <connection proxybindingid="5000">
